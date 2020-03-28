@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container py-2">
             <a class="navbar-brand" href="/">My Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -70,10 +70,16 @@
         </div>
     </nav>
 
-    <main>
+    <main style="min-height:85vh">
         @yield('content')
     </main>
-    </div>
+
+    <footer class="bg-dark p-4">
+
+        <h4 class="text-center text-light">
+            Your Footer
+        </h4>
+    </footer>
 </body>
 
 </html>

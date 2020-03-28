@@ -13,11 +13,21 @@ class UserController extends Controller
 
     public function profile()
     {
-        return view('admin');
+        return view('profile');
     }
 
     public function settings()
     {
-        return view('admin');
+        return view('settings');
+    }
+
+    public function orders()
+    {
+        return view('orders');
+    }
+
+    public function cart()
+    {
+        return view('cart');
     }
 }

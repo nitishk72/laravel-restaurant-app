@@ -13,7 +13,7 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin');
+        return view('admin.home');
     }
 
     public function admin()
@@ -27,12 +27,12 @@ class AdminController extends Controller
     }
     
     public function settings(){
-        return view('settings');
+        return view('admin.settings');
 
     }
 
     public function products(){
-        return view('products');
+        return view('admin.products');
 
     }
 }
