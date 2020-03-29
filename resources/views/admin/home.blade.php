@@ -29,7 +29,36 @@
               <button type="submit" class="btn btn-primary mb-2">Add Item</button>
               </form>
         </div>
-        <p> {{ session('mssg') }} </p>
+        <p class="text-success"> {{ session('mssg') }} </p>
+        <div class="container px-0">
+          <h1 class="title">All Products</h1>
+          <p class="text-danger" > {{ session('mssg-dlt') }} </p>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Price</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              @forelse ($products as $item)
+                <tr>
+                  <th scope="row">{{$loop->index + 1}}</th>
+                  <td> {{ $item->name }} </td>
+                  <td> {{ $item->type }} </td>
+                  <td> {{ $item->price }} </td>
+                  <td> <a href="{{ route('delete', $item->id) }}" class="btn btn-small btn-danger">delete</a> </td>
+                </tr>
+                @empty
+                  <p>No Food items added yet</p>
+              @endforelse
+              
+            </tbody>
+          </table>
+        </div>
     </div>
 </main>
 @endsection

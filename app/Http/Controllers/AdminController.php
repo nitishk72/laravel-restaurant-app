@@ -14,7 +14,10 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin.home');
+        // $food = Products::where('type', 'Lunch')->get();
+        $food = Products::all();
+        // return $food;
+        return view('admin.home', ['products'=>$food]);
     }
 
     public function create()
@@ -26,6 +29,12 @@ class AdminController extends Controller
         // return $food;
         $food->save();
         return redirect('/admin')->with('mssg', "Product added!");
+    }
+
+    public function remove($id)
+    {
+        Products::findOrFail($id)->delete();
+        return redirect('/admin')->with('mssg-dlt', "Product Deleted!");
     }
 
     public function admin()

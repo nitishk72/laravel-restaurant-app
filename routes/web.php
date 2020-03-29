@@ -29,6 +29,7 @@ Route::view('/admin/login', 'admin.login');
 // For Authenticated Admin only
 Route::get('/admin', 'AdminController@index');
 Route::post('/admin', 'AdminController@create');
+Route::get('/admin/delete/{id}', 'AdminController@remove')->name('delete');
 Route::get('/admin/logout', 'AdminController@logout');
-Route::get('/admin/settings', 'AdminController@settings');
-Route::get('/admin/products', 'AdminController@products');
+// Route::get('/admin/settings', 'AdminController@settings');
+// Route::get('/admin/products', 'AdminController@products');
