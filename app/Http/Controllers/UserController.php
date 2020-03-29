@@ -24,13 +24,10 @@ class UserController extends Controller
 
     public function cart()
     {
-        // $cart = new User();
-        // $cart->name = request('name');
-        // $cart->price = request('price');
-        $cart = request('cartItem');
-        $foodItems = Products::whereIn('id', $cart)->get();
-        // return $foodItems;
-        return view('customer.cart', ['carts'=>$foodItems] );
+        $cartItems = session('cart', []);
+        $foodItems = Products::whereIn('id', $cartItems)->get();
+
+        return view('customer.cart', ['carts' => $foodItems] );
     }
 
     public function orders()

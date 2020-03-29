@@ -3,10 +3,22 @@
 @section('content')
 <main class="d-flex">
   <div class="container mt-5 products">
-    <p class="text-success"> {{ session('mssg') }} </p>
+
+    @if (session('mssg'))
+    <div class="alert alert-primary" role="alert">
+      {{ session('mssg') }}
+    </div>
+    @endif
+
     <div class="container px-0">
       <h1 class="title">All Products</h1>
-      <p class="text-danger"> {{ session('mssg-dlt') }} </p>
+
+      @if (session('mssg-dlt'))
+      <div class="alert alert-danger" role="alert">
+        {{ session('mssg-dlt') }}
+      </div>
+      @endif
+
       <div class="table-responsive">
 
         <table class="table table-bordered">

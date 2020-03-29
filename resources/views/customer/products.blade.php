@@ -5,7 +5,7 @@
     <div class="container my-5 products">
 
         <h3>Select what you want to order</h3>
-        <form action="/cart" method="post">
+        <form action="/addCart" method="POSt">
             @csrf
             <table class="table table-striped">
                 <thead>

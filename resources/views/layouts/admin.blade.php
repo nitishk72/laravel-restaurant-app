@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container py-2">
             <a class="navbar-brand" href="/admin">Restaurant</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -55,8 +55,8 @@
     @yield('content')
     {{-- </main> --}}
 
-    <footer class="bg-dark p-4">
-        <h4 class="text-center text-white">
+    <footer class="bg-primary p-4">
+        <h4 class="text-center text-light">
             &copy; Restaurant 2020
         </h4>
     </footer>

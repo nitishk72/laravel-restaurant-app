@@ -52,6 +52,9 @@
                         <a class="nav-link" href="{{ route('home')}}">Home</a>
                     </li>
                     <li class="nav-item active">
+                        <a class="nav-link" href="{{ route('cart')}}">Cart</a>
+                    </li>
+                    <li class="nav-item active">
                         <a class="nav-link" href="{{ route('profile')}}">Profile</a>
                     </li>
                     <li class="nav-item active">

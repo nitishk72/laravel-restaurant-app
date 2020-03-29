@@ -25,4 +25,12 @@ class ProductsController extends Controller
         // return $foodItems;
         return view('customer.products',  [ 'foodItems' => $foodItems ]);
     }
+
+    public function addCart(Request $request){
+        $cartItem =  $request->all()['cartItem'] ?? [];
+        foreach($cartItem as $item){
+            session()->push('cart', $item);
+        }
+        return back();
+    }
 }

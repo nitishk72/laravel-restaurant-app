@@ -4,7 +4,7 @@
 <main class="d-flex">
   <div class="container my-4">
     <h3>Your Cart</h3>
-    <table class="table table-hover container">
+    <table class="table table-bordered container">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -26,7 +26,10 @@
 
       </tbody>
     </table>
-    <a href="/orders" class="btn btn-primary">Order</a>
+    <div class="d-flex">
+
+    <a href="/orders" class="btn btn-primary ml-auto btn-lg">Order</a>
+    </div>
   </div>
 </main>
 @endsection
