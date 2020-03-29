@@ -14,7 +14,8 @@ class UserController extends Controller
 
     public function profile()
     {
-        return view('customer.profile');
+        $user = auth()->user();
+        return view('customer.profile')->with('user', $user);
     }
 
     public function settings()
