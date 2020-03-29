@@ -11,7 +11,7 @@
         <div class="row foodTypeCards justify-content-between">
             <div class="container">
              <div class="row justify-content-around my-4">
-             <a href="{{ route('product', $product->id ) }}" class="card col-3">
+             <a href="/product/breakfast" class="card col-3">
                     <div style="background-image:url(/img/breakfast.jpeg)" class="card-img-top" alt="..."></div>
                     <div class="card-body text-center">
                       <h5 class="card-title">BreakFast</h5>
@@ -25,13 +25,13 @@
                </a>
              </div>
             <div class="row justify-content-around my-4">
-                <a href="/product/" class="card col-3">
+                <a href="/product/dinner" class="card col-3">
                     <div style="background-image:url(/img/dinner.jpeg)" class="card-img-top" alt="..."></div>
                     <div class="card-body text-center">
                       <h5 class="card-title">Dinner</h5>
                     </div>
                 </a>
-                <a href="/product/" class="card col-3">
+                <a href="/product/desserts" class="card col-3">
                     <div style="background-image:url(/img/desserts.jpeg)" class="card-img-top" alt="..."></div>
                     <div class="card-body text-center">
                       <h5 class="card-title">Dessert</h5>
