@@ -172,3 +172,9 @@ footer h4{
 .foodTypeCards .card-body .card-title{
     margin-bottom: 0 !important;
 }
+
+/* products */
+
+.products *{
+    font-family: 'Raleway', sans-serif !important;
+}

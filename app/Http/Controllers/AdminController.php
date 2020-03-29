@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Products;
 
 class AdminController extends Controller
 {
@@ -14,6 +15,17 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin.home');
+    }
+
+    public function create()
+    {
+        $food = new Products();
+        $food->name = request('name');
+        $food->type = request('type');
+        $food->price = request('price');
+        // return $food;
+        $food->save();
+        return redirect('/admin')->with('mssg', "Product added!");
     }
 
     public function admin()
