@@ -20,9 +20,9 @@ Route::get('/product/{id}', 'ProductsController@product')->name('product');
 
 // For Authenticated User only
 Route::get('/profile', 'UserController@profile')->name('profile');
-Route::get('/cart', 'UserController@cart')->name('cart');
-Route::post('/orders', 'UserController@orders')->name('orders');
-Route::get('/settings', 'UserController@settings')->name('settings');
+Route::post('/cart', 'UserController@cart')->name('cart');
+Route::get('/orders', 'UserController@orders')->name('orders');
+// Route::get('/settings', 'UserController@settings')->name('settings');
 
 Route::view('/admin/login', 'admin.login');
 

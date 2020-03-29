@@ -11,28 +11,28 @@
         <div class="row foodTypeCards justify-content-between">
             <div class="container">
              <div class="row justify-content-around my-4">
-             <a href="/product/breakfast" class="card col-3">
-                    <div style="background-image:url(/img/breakfast.jpeg)" class="card-img-top" alt="..."></div>
+             <a href="/product/BreakFast" class="card col-3">
+                    <div style="background-image:url(/img/BreakFast.jpeg)" class="card-img-top" alt="..."></div>
                     <div class="card-body text-center">
                       <h5 class="card-title">BreakFast</h5>
                     </div>
                 </a>
-                <a href="/product/lunch" class="card col-3">
-                   <div style="background-image:url(/img/lunch.jpeg)" class="card-img-top" alt="..."></div>
+                <a href="/product/Lunch" class="card col-3">
+                   <div style="background-image:url(/img/Lunch.jpeg)" class="card-img-top" alt="..."></div>
                    <div class="card-body text-center">
                      <h5 class="card-title">Lunch</h5>
                    </div>
                </a>
              </div>
             <div class="row justify-content-around my-4">
-                <a href="/product/dinner" class="card col-3">
-                    <div style="background-image:url(/img/dinner.jpeg)" class="card-img-top" alt="..."></div>
+                <a href="/product/Dinner" class="card col-3">
+                    <div style="background-image:url(/img/Dinner.jpeg)" class="card-img-top" alt="..."></div>
                     <div class="card-body text-center">
                       <h5 class="card-title">Dinner</h5>
                     </div>
                 </a>
-                <a href="/product/desserts" class="card col-3">
-                    <div style="background-image:url(/img/desserts.jpeg)" class="card-img-top" alt="..."></div>
+                <a href="/product/Dessert" class="card col-3">
+                    <div style="background-image:url(/img/Dessert.jpeg)" class="card-img-top" alt="..."></div>
                     <div class="card-body text-center">
                       <h5 class="card-title">Dessert</h5>
                     </div>

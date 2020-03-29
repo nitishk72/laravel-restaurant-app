@@ -178,3 +178,10 @@ footer h4{
 .products *{
     font-family: 'Raleway', sans-serif !important;
 }
+
+/* cart */
+
+.cartInfo img{
+    width: 40px;
+    
+}

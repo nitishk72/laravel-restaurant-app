@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Products;
 
 class UserController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function profile()
     {
@@ -21,18 +22,19 @@ class UserController extends Controller
         return view('customer.settings');
     }
 
-    public function orders()
+    public function cart()
     {
         // $cart = new User();
         // $cart->name = request('name');
         // $cart->price = request('price');
         $cart = request('cartItem');
-        return $cart;
-        // return view('customer.orders');
+        $foodItems = Products::whereIn('id', $cart)->get();
+        // return $foodItems;
+        return view('customer.cart', ['carts'=>$foodItems] );
     }
 
-    public function cart()
+    public function orders()
     {
-        return view('customer.cart');
+        return view('customer.orders');
     }
 }
