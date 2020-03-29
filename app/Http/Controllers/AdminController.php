@@ -20,13 +20,18 @@ class AdminController extends Controller
         return view('admin.home', ['products'=>$food]);
     }
 
-    public function create()
+    public function create(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'type' => 'required',
+            'price' => 'required',
+        ]);
+
         $food = new Products();
-        $food->name = request('name');
-        $food->type = request('type');
-        $food->price = request('price');
-        // return $food;
+        $food->name = $request->input('name');
+        $food->type = $request->input('type');
+        $food->price = $request->input('price');
         $food->save();
         return redirect('/admin')->with('mssg', "Product added!");
     }
@@ -35,6 +40,17 @@ class AdminController extends Controller
     {
         Products::findOrFail($id)->delete();
         return redirect('/admin')->with('mssg-dlt', "Product Deleted!");
+    }
+
+    public function update($id)
+    {
+        $product = Products::find($id);
+        return view("admin.editProduct",)->with('product', $product);
+    }
+    public function doUpdate($id){
+
+        Products::find($id)->update(request()->except('_token'));
+        return redirect('/admin');
     }
 
     public function admin()

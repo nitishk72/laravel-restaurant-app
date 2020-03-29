@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container py-2">
             <a class="navbar-brand" href="/">Restaurant</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -49,14 +49,11 @@
                     </li>
                     @else
                     <li class="nav-item active">
-                        <a  class="nav-link" href="{{ route('home')}}">Home</a>
-                    </li>
-                    {{-- <li class="nav-item active">
-                        <a  class="nav-link" href="{{ route('posts')}}">Posts</a>
+                        <a class="nav-link" href="{{ route('home')}}">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a  class="nav-link" href="{{ route('createPost')}}">Crete Post</a>
-                    </li> --}}
+                        <a class="nav-link" href="{{ route('profile')}}">Profile</a>
+                    </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ route('logout') }}"
                             onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
@@ -72,12 +69,12 @@
     </nav>
 
     {{-- <main> --}}
-        @yield('content')
+    @yield('content')
     {{-- </main> --}}
 
     <footer class="bg-dark p-4">
         <h4 class="text-center text-white">
-            &copy;	Restaurant 2020
+            &copy; Restaurant 2020
         </h4>
     </footer>
 </body>

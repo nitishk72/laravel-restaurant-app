@@ -30,6 +30,8 @@ Route::view('/admin/login', 'admin.login');
 Route::get('/admin', 'AdminController@index');
 Route::post('/admin', 'AdminController@create');
 Route::get('/admin/delete/{id}', 'AdminController@remove')->name('delete');
+Route::get('/admin/edit/{id}', 'AdminController@update')->name('edit');
+Route::post('/admin/edit/{id}', 'AdminController@doUpdate')->name('doUpdate');
 Route::get('/admin/logout', 'AdminController@logout');
 // Route::get('/admin/settings', 'AdminController@settings');
 // Route::get('/admin/products', 'AdminController@products');

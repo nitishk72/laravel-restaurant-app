@@ -2,7 +2,7 @@
 
 @section('content')
 <main class="d-flex">
-    <div class="container-fluid bg-dark align-items-center justify-content-conter foodTypeCont ">
+    <div class="container-fluid bd-light align-items-center justify-content-conter foodTypeCont ">
         <div class="row justify-content-center">
             <div class="col text-white text-center">
                 <h4>Select your food type</h4>
