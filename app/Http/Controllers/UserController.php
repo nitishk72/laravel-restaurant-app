@@ -30,8 +30,9 @@ class UserController extends Controller
         return view('customer.cart', ['carts' => $foodItems] );
     }
 
-    public function orders()
+    public function doOrders()
     {
+        session()->forget('cart');
         return view('customer.orders');
     }
 }

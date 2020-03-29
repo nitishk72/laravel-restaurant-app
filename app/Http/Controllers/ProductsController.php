@@ -31,6 +31,6 @@ class ProductsController extends Controller
         foreach($cartItem as $item){
             session()->push('cart', $item);
         }
-        return back();
+        return back()->with('message', 'Added to Cart');
     }
 }

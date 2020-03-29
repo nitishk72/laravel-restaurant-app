@@ -26,10 +26,12 @@
 
       </tbody>
     </table>
-    <div class="d-flex">
-
-    <a href="/orders" class="btn btn-primary ml-auto btn-lg">Order</a>
-    </div>
+    <form action="/orders" method="POST">
+      <div class="d-flex">
+        @csrf
+        <input type="submit" class="btn btn-primary ml-auto btn-lg" value="Order">
+      </div>
+    </form>
   </div>
 </main>
 @endsection
