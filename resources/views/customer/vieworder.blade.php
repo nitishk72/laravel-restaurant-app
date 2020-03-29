@@ -11,6 +11,8 @@
 
     <div class="row">
         <div class="col-sm-12 col-md-8 offset-md-2">
+            <h1> Your Order ID id {{ $order->id }}</h1>
+            <h3>Your Order is  {{ $order->status }}</h3>
             <table class="table table-bordered">
                 <thead>
                     <tr>

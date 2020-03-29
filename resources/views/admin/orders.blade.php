@@ -1,20 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.admin')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+@section('content')
+<main style="min-height:80vh;">
 
-</head>
-
-<body>
     <div class="jumbotron">
         <h1 class="text-center">Admin Orders Page</h1>
     </div>
-</body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 offset-md-2">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID #</th>
+                            <th>User ID </th>
+                            <th>Time </th>
+                            <th>Status </th>
+                            <th>Action </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($orders as $order)
+                        <tr>
+                            <td>{{ $order->id }}</td>
+                            <td>{{ $order->user }}</td>
+                            <td>{{ $order->created_at }}</td>
+                            <td>{{ $order->status }}</td>
+                            <td>
+                                <a href="/admin/approveOrder/{{$order->id}}" class="btn btn-primary">Approve</a>
+                                <a href="/admin/cancelOrder/{{$order->id}}" class="btn btn-danger">Cancel</a>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
 
-</html>
+
+@endsection

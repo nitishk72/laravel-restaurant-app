@@ -35,6 +35,11 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/admin/add', 'AdminController@add')->name('addProducts');
 Route::post('/admin/add', 'AdminController@create');
 
+Route::get('/admin/viewAdminOrders', 'AdminController@viewOrders')->name('viewAdminOrders');
+Route::get('/admin/approveOrder/{id}', 'AdminController@approveOrder')->name('approveOrder');
+Route::get('/admin/cancelOrder/{id}', 'AdminController@cancelOrder')->name('cancelOrder');
+
+
 Route::get('/admin/view/{id}', 'AdminController@view')->name('view');
 
 Route::get('/admin/delete/{id}', 'AdminController@remove')->name('delete');

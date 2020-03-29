@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Products;
+use App\Orders;
 
 class AdminController extends Controller
 {
@@ -82,6 +83,29 @@ class AdminController extends Controller
 
     public function products(){
         return view('admin.products');
+
+    }
+
+
+    public function viewOrders(){
+        $orders  = Orders::all();
+        return view('admin.orders')->with('orders', $orders);;
+
+    }
+
+
+
+    public function approveOrder($id){
+        $orders  = Orders::findOrFail($id)->update(['status' => 'Approved']);
+        return back()->with('message', 'Approved');
+
+    }
+
+
+
+    public function cancelOrder($id){
+        $orders  = Orders::findOrFail($id)->update(['status' => 'Canceled']);
+        return back()->with('message', 'Canceled');
 
     }
 }

@@ -16,6 +16,7 @@
                     <tr>
                         <th>ID #</th>
                         <th>Date</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -24,6 +25,7 @@
                     <tr>
                         <td>{{ $order->id }}</td>
                         <td>{{ $order->created_at }}</td>
+                        <td>{{ $order->status }}</td>
                         <th>
                         <a href="/orders/{{$order->id}}" class="btn btn-secondary">View Order</a>
                         </th>

@@ -36,6 +36,7 @@ class UserController extends Controller
     {
         $orders = new Orders();
         $orders->user = auth()->user()->id;
+        $orders->status = 'PROCESSING';
         $orders->orders = json_encode(session('cart', []));
         $orders->save();
         

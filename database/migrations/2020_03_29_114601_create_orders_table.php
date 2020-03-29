@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user');
             $table->json('orders');
+            $table->text('status');
             $table->timestamps();
         });
     }

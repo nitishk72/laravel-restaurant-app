@@ -38,13 +38,13 @@ class ProductsController extends Controller
 
     public function orderHistory(){
         $user = ''.auth()->user()->id;
-        $orders = Orders::where('user', '=', '1')->get();
+        $orders = Orders::where('user', '=', $user)->get();
         return view('customer.history')->with('orders', $orders);
     }
 
     public function viewOrder($id){
         $order = Orders::find($id);
         $foodItems = Products::whereIn('id',json_decode( $order['orders']))->get();
-        return view('customer.vieworder')->with('items', $foodItems);
+        return view('customer.vieworder')->with('items', $foodItems)->with('order', $order);
     }
 }
