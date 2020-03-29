@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Products;
+use App\Orders;
 
 class ProductsController extends Controller
 {
@@ -36,6 +37,14 @@ class ProductsController extends Controller
 
 
     public function orderHistory(){
-        return view('customer.history');
+        $user = ''.auth()->user()->id;
+        $orders = Orders::where('user', '=', '1')->get();
+        return view('customer.history')->with('orders', $orders);
+    }
+
+    public function viewOrder($id){
+        $order = Orders::find($id);
+        $foodItems = Products::whereIn('id',json_decode( $order['orders']))->get();
+        return view('customer.vieworder')->with('items', $foodItems);
     }
 }

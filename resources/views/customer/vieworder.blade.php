@@ -15,18 +15,18 @@
                 <thead>
                     <tr>
                         <th>ID #</th>
+                        <th>Name</th>
+                        <th>Type</th>
                         <th>Date</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($orders as $order)
+                    @foreach ($items as $item)
                     <tr>
-                        <td>{{ $order->id }}</td>
-                        <td>{{ $order->created_at }}</td>
-                        <th>
-                        <a href="/orders/{{$order->id}}" class="btn btn-secondary">View Order</a>
-                        </th>
+                        <td>{{ $item->id }}</td>
+                        <td>{{ $item->name }}</td>
+                        <td>{{ $item->type }}</td>
+                        <td>{{ $item->created_at }}</td>
                     </tr>
                 @endforeach
                 </tbody>

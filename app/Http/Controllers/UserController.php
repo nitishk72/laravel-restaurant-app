@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Products;
+use App\Orders;
 
 class UserController extends Controller
 {
@@ -33,7 +34,12 @@ class UserController extends Controller
 
     public function doOrders()
     {
+        $orders = new Orders();
+        $orders->user = auth()->user()->id;
+        $orders->orders = json_encode(session('cart', []));
+        $orders->save();
+        
         session()->forget('cart');
-        return view('customer.orders');
+        return view('customer.orders')->with('orders', $orders);
     }
 }

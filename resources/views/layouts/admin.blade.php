@@ -55,7 +55,7 @@
     @yield('content')
     {{-- </main> --}}
 
-    <footer class="bg-primary p-4">
+    <footer class="bg-dark p-4">
         <h4 class="text-center text-light">
             &copy; Restaurant 2020
         </h4>

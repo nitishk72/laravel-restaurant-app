@@ -26,12 +26,16 @@
 
       </tbody>
     </table>
+    @if (count($carts) > 0)
+
     <form action="/orders" method="POST">
       <div class="d-flex">
         @csrf
         <input type="submit" class="btn btn-primary ml-auto btn-lg" value="Order">
       </div>
     </form>
+
+    @endif
   </div>
 </main>
 @endsection
