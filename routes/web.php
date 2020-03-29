@@ -16,12 +16,12 @@ Auth::routes();
 Route::view('/', 'welcome');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products', 'ProductsController@products')->name('products');
-Route::get('/product/:id', 'ProductsController@product')->name('product');
+Route::get('/product/{id}', 'ProductsController@product')->name('product');
 
 // For Authenticated User only
 Route::get('/profile', 'UserController@profile')->name('profile');
 Route::get('/cart', 'UserController@cart')->name('cart');
-Route::get('/orders', 'UserController@orders')->name('orders');
+Route::post('/orders', 'UserController@orders')->name('orders');
 Route::get('/settings', 'UserController@settings')->name('settings');
 
 Route::view('/admin/login', 'admin.login');

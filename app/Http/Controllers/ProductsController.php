@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     public function products()
     {
@@ -18,6 +18,13 @@ class ProductsController extends Controller
 
     public function product($id)
     {
-        return view('admin');
+        // filter those products where foodType = id
+        $foodItems = [
+           [ 'name'=>'hi', 'price'=>67.5 ],
+           [ 'name'=>'hi', 'price'=>67.5 ],
+           [ 'name'=>'hi', 'price'=>67.5 ],
+        ];
+        // return view('customer.products', [ 'foodItems'=>$foodItems ]);
+        return view('customer.products',  [ 'foodItems' => $foodItems ]);
     }
 }

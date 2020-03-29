@@ -22,13 +22,13 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container py-2">
-            <a class="navbar-brand" href="/">My Blog</a>
+            <a class="navbar-brand" href="/">Restaurant</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -70,14 +70,13 @@
         </div>
     </nav>
 
-    <main style="min-height:85vh">
+    {{-- <main> --}}
         @yield('content')
-    </main>
+    {{-- </main> --}}
 
     <footer class="bg-dark p-4">
-
-        <h4 class="text-center text-light">
-            Your Footer
+        <h4 class="text-center text-white">
+            &copy;	Restaurant 2020
         </h4>
     </footer>
 </body>

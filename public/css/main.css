@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Raleway|Special+Elite&display=swap');
+
+/* 
+font-family: 'Dancing Script', cursive;
+font-family: 'Special Elite', cursive; 
+font-family: 'Raleway', sans-serif;
+ */
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav{
+    flex-grow: 1;
+    max-height: 68px;
+}
+
+main{
+    flex-grow: 8;
+}
+
+footer{
+    flex-grow: 1;
+    max-height: 100px;
+}
+
+*{
+    font-family: 'Special Elite', cursive;
+}
+
+.bg-dark{
+    background-color: #0c1319 !important;
+}
+
+.backImg{
+    background-size: cover;
+    background-position: center;
+}
+.welcomeImg:nth-of-type(1){
+    background-image: url('/img/food1.jpg');
+}
+.welcomeImg:nth-of-type(2){
+    background-image: url('/img/food2.jpeg');
+}
+/* .welcome{
+    display: grid;
+} */
+.welcome {
+    height: 90vh;
+    background-color: #0c1319;
+} 
+
+.welcomeCards{
+    position: absolute;
+    z-index: 1;
+    /* background-color: #0c1319; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100px);
+}
+
+.welcomeCards .card{
+    width: 250px;
+    border-radius: 0;
+    opacity: 0.9;
+    background-color: white;
+}
+
+.welcomeCards .card .card-img-top{
+    height: 80px;
+    margin-top: 10px;
+}
+
+.welcomeCards .card .card-title{
+    font-size: 18px;
+    font-weight: 100;
+    color: orange;
+    font-family: 'Dancing Script', cursive;
+}
+
+.welcomeCards .card .card-text{
+    font-size: 12px;
+    font-weight: 100;
+    font-family: 'Raleway', sans-serif;
+}
+
+.welcomeText{
+    max-width: 400px;
+    margin-left: 40px;
+}
+
+.welcomeText .title{
+    color: orange;
+    font-family: 'Special Elite', cursive;
+}
+.welcomeText .subtitle{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.welcomeCards .d-flex{
+    width: 100vw;
+}
+
+.contentDiv{
+    display: flex;
+    align-items: center;
+}
+
+.navbar{
+    /* position: absolute; */
+    width: 100%;
+    z-index: 1;
+}
+
+.foodQuote{
+    padding: 50px;
+    color: #fff;
+}
+
+.foodQuote h5{
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    text-align: center;
+}
+
+footer h4{
+    border-top: 1px solid #fff;
+    font-family: 'Special Elite', cursive;
+    padding-top: 30px;
+}
+
+/* Login */
+
+.mainCont{
+    /* min-height: 85vh; */
+    display: grid;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Home */
+
+.foodTypeCont{
+    padding: 0 72px;
+}
+
+.foodTypeCards a{
+    color: black;
+    text-decoration: none;
+}
+
+.foodTypeCards .card{
+    min-width: 200px;
+    width: 50%;
+    padding: 0;
+    cursor: pointer;
+}
+
+.foodTypeCards .card-img-top{
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.foodTypeCards .card-body{
+    padding: 0;
+}
+.foodTypeCards .card-body .card-title{
+    margin-bottom: 0 !important;
+}
