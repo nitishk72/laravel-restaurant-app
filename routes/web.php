@@ -18,6 +18,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products', 'ProductsController@products')->name('products');
 Route::post('/addCart', 'ProductsController@addCart')->name('addCart');
 Route::get('/product/{id}', 'ProductsController@product')->name('product');
+Route::get('/orders/', 'ProductsController@orderHistory')->name('orderHistory');
 
 // For Authenticated User only
 Route::get('/profile', 'UserController@profile')->name('profile');

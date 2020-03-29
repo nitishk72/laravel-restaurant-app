@@ -33,4 +33,9 @@ class ProductsController extends Controller
         }
         return back()->with('message', 'Added to Cart');
     }
+
+
+    public function orderHistory(){
+        return view('customer.history');
+    }
 }
