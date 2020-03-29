@@ -13,7 +13,7 @@
 Auth::routes();
 
 // For Every User
-Route::view('/', 'welcome');
+Route::view('/', 'welcome')->name('welcome');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products', 'ProductsController@products')->name('products');
 Route::get('/product/{id}', 'ProductsController@product')->name('product');
