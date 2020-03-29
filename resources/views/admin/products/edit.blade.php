@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <main class="d-flex">
@@ -27,7 +27,7 @@
                         <input type="number" name="price" class="form-control" placeholder="Price" value="<?= $product['price'] ?>">
                     </div>
 
-                    <button type="submit" class="btn btn-primary mb-2 btn-block">Update Item</button>
+                    <button type="submit" class="btn btn-primary mb-2 btn-block">Update Food</button>
                 </form>
             </div>
         </div>

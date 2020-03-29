@@ -20,6 +20,12 @@ class AdminController extends Controller
         return view('admin.home', ['products'=>$food]);
     }
 
+
+    public function add()
+    {
+        return view("admin.products.add");
+    }
+
     public function create(Request $request)
     {
         $validatedData = $request->validate([
@@ -35,6 +41,12 @@ class AdminController extends Controller
         $food->save();
         return redirect('/admin')->with('mssg', "Product added!");
     }
+    
+    public function view($id)
+    {
+        $product = Products::find($id);
+        return view('admin.products.view')->with('product', $product);
+    }
 
     public function remove($id)
     {
@@ -45,7 +57,7 @@ class AdminController extends Controller
     public function update($id)
     {
         $product = Products::find($id);
-        return view("admin.editProduct",)->with('product', $product);
+        return view("admin.products.edit",)->with('product', $product);
     }
     public function doUpdate($id){
 

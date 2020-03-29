@@ -28,10 +28,17 @@ Route::view('/admin/login', 'admin.login');
 
 // For Authenticated Admin only
 Route::get('/admin', 'AdminController@index');
-Route::post('/admin', 'AdminController@create');
+
+Route::get('/admin/add', 'AdminController@add')->name('addProducts');
+Route::post('/admin/add', 'AdminController@create');
+
+Route::get('/admin/view/{id}', 'AdminController@view')->name('view');
+
 Route::get('/admin/delete/{id}', 'AdminController@remove')->name('delete');
+
 Route::get('/admin/edit/{id}', 'AdminController@update')->name('edit');
 Route::post('/admin/edit/{id}', 'AdminController@doUpdate')->name('doUpdate');
+
 Route::get('/admin/logout', 'AdminController@logout');
 // Route::get('/admin/settings', 'AdminController@settings');
 // Route::get('/admin/products', 'AdminController@products');
